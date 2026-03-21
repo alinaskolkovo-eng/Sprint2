@@ -7,14 +7,14 @@ import service.ShoppingCart;
 public class Main {
         public static void main (String[]args){
             Food meat = new Meat(5, 100);
-            Food redApples = new Apple(10, 50, Colour.Red);
-            Food greenApples = new Apple(8, 60, Colour.Green);
+            Food redApples = new Apple(10, 50, Colour.RED);
+            Food greenApples = new Apple(8, 60, Colour.GREEN);
 
             Food[] items = {meat, redApples, greenApples};
             ShoppingCart cart = new ShoppingCart(items);
 
-            System.out.println(cart.getTotalPriceWithoutDiscount());
-            System.out.println(cart.getTotalPriceWithDiscount());
-            System.out.println(cart.getTotalVegetarianPriceWithoutDiscount());
+            System.out.println("Общая сумма без скидки: " + cart.getTotalPriceWithoutDiscount());
+            System.out.println("Общая сумма со скидкой: " + cart.getTotalPriceWithDiscount());
+            System.out.println("Сумма вегетарианских товаров без скидки: " + cart.getTotalVegetarianPriceWithoutDiscount());
         }
     }
